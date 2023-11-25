@@ -1,20 +1,30 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'; 
+import React from 'react';
+import './failure.css';
 
-const Failure = () => {
-    const navigate = useNavigate()
-    return (
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-6 text-center">
-                <div className="alert alert-danger text-center">
-                    <h4 className="alert-heading">Oops, something went wrong!</h4>
-                </div>
-                <a href='/'>Back to Home</a>
-            </div>
-          </div>
-        </div>
-      );
+function Failure() {
+  return (
+    <div className="container">
+      <header>
+        <h1>Homaid</h1>
+      </header>
+      <main>
+        <PaymentFailure />
+      </main>
+      <footer>
+        <p>&copy; 2023 Homaid. All rights reserved.</p>
+      </footer>
+    </div>
+  );
 }
 
-export default Failure
+function PaymentFailure() {
+  return (
+    <section className="payment-failure">
+      <h2>Payment Failed</h2>
+      <p>Unfortunately, your payment was not successful. Please try again or contact customer support for assistance.</p>
+      <a href="/">Go Back</a>
+    </section>
+  );
+}
+
+export default Failure;

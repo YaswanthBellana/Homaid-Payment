@@ -1,18 +1,30 @@
-import React from 'react'
+import React from 'react';
+import './success.css';
 
-const Success = () => {
-    return (
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-6 text-center">
-                <div className="alert alert-success text-center">
-                    <h4 className="alert-heading">Payment Successfull</h4>
-                </div>
-                <a href='/'>Back to Home</a>
-            </div>
-          </div>
-        </div>
-      );
+function App() {
+  return (
+    <div className="container">
+      <header>
+        <h1>Homaid</h1>
+      </header>
+      <main>
+        <PaymentSuccess />
+      </main>
+      <footer>
+        <p>&copy; 2023 Homaid. All rights reserved.</p>
+      </footer>
+    </div>
+  );
 }
 
-export default Success
+function PaymentSuccess() {
+  return (
+    <section className="payment-success">
+      <h2>Payment Successful</h2>
+      <p>Thank you for your payment. Your transaction was successful. We will process your request shortly.</p>
+      <a href="/">Return to Home</a>
+    </section>
+  );
+}
+
+export default App;

@@ -60,8 +60,6 @@ const Phonepe = () => {
             </form>
         </div>
     </div>
-    <p className='m-0'>@codesense24</p>
-    <p className='' style={{fontSize: "14px"}}>Subscribe my youtube channel</p>
     </>
   )
 }
